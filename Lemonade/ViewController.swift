@@ -176,15 +176,17 @@ class ViewController: UIViewController {
         var sugarRatio:Float = Float(sugarCubesInTheMix)
         
         batchRatio = lemonRatio / sugarRatio
-        
-        if batchRatio > 1 {
-            println("the batch ratio is \(batchRatio) -- sour")
-        } else if batchRatio == 1 {
-            println("the batch radio is \(batchRatio) -- balanced")
-        } else if batchRatio < 1 {
-            println("the batch ratio is \(batchRatio) -- sweet")
+        if lemonsInTheMix == 0 && sugarCubesInTheMix == 0 {
+            showAlertWithText(header: "No Ingredients", message: "You gotta add some ingredients to this batch before the customers arrive.")
+        } else {
+            if batchRatio > 1 {
+                println("the batch ratio is \(batchRatio) -- sour")
+            } else if batchRatio == 1 {
+                println("the batch radio is \(batchRatio) -- balanced")
+            } else if batchRatio < 1 {
+                println("the batch ratio is \(batchRatio) -- sweet")
+            }
         }
-        
 
     }
 
