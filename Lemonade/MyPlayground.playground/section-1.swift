@@ -19,3 +19,17 @@ if wallet >= 2 {
     
 }
 
+
+//batch computations
+
+var lemonsMix = 1
+var lemonFloat:Float = Float(lemonsMix)
+
+var sugarsMix = 3
+var sugarFloat = Float(sugarsMix)
+
+
+var batchRatio = lemonFloat / sugarFloat
+
+
+

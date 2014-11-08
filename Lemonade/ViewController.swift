@@ -42,6 +42,10 @@ class ViewController: UIViewController {
     //
     
     @IBAction func startTheDayButtonPressed(sender: AnyObject) {
+        println("start button pressed")
+
+        batchMixing()
+    
     }
     
     
@@ -119,7 +123,7 @@ class ViewController: UIViewController {
             lemons += 1
             lemonSuppliesLabel.text = "\(lemons)"
             lemonsInTheMix -= 1
-            lemonSuppliesLabel.text = "\(lemonsInTheMix)"
+            lemonsMixLabel.text = "\(lemonsInTheMix)"
         } else {
             showAlertWithText(header: "Warning", message: "You don't have any lemons left to remove.  Make this lemonade more sour :)")
         }
@@ -131,9 +135,9 @@ class ViewController: UIViewController {
             sugarCubes -= 1
             sugarCubesSuppliesLabel.text = "\(sugarCubes)"
             sugarCubesInTheMix += 1
-            sugarCubesSuppliesLabel.text = "\(sugarCubesInTheMix)"
+            sugarCubesMixLabel.text = "\(sugarCubesInTheMix)"
         } else {
-            showAlertWithText(header: "Too Sour", message: "You gotta buy some sugar before you can add any to today's batch.")
+            showAlertWithText(header: "Too Sour", message: "You gotta buy some sugar before you can add any more to today's batch.")
         }
     }
     
@@ -161,6 +165,24 @@ class ViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    
+    func batchMixing() {
+        
+        var lemonRatio:Float = Float(lemonsInTheMix)
+        var sugarRatio:Float = Float(sugarCubesInTheMix)
+        
+        var batchRatio:Float = lemonRatio / sugarRatio
+        
+        println("\(batchRatio)")
+        
+    }
 
+    
+    func customerStuff() {
+        
+        var randomDailyCustomers = Int(arc4random_uniform(UInt32(10)))
+        
+        
+    }
 }
 

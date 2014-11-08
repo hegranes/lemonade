@@ -82,15 +82,6 @@
                                     <rect key="frame" x="18" y="531" width="359" height="88"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-XA-MRR">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="28"/>
-                                <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="120" y="91" width="79" height="52"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGS-be-3Yq">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="24"/>
@@ -325,6 +316,15 @@
                                     <action selector="startTheDayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tNk-Sw-B8d"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-XA-MRR">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="28"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="153" y="91" width="94" height="52"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -337,7 +337,6 @@
                                 <exclude reference="kbN-cF-ll9"/>
                                 <exclude reference="KM1-y1-nNP"/>
                                 <exclude reference="w53-et-DKv"/>
-                                <exclude reference="t6M-XA-MRR"/>
                                 <exclude reference="PGS-be-3Yq"/>
                                 <exclude reference="OMe-6o-zLM"/>
                                 <exclude reference="E5C-pk-YLP"/>
@@ -362,6 +361,7 @@
                                 <exclude reference="SJ5-rU-OjI"/>
                                 <exclude reference="n1w-P3-Ja3"/>
                                 <exclude reference="wwv-Vi-sSU"/>
+                                <exclude reference="t6M-XA-MRR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -374,7 +374,6 @@
                                 <include reference="kbN-cF-ll9"/>
                                 <include reference="KM1-y1-nNP"/>
                                 <include reference="w53-et-DKv"/>
-                                <include reference="t6M-XA-MRR"/>
                                 <include reference="PGS-be-3Yq"/>
                                 <include reference="OMe-6o-zLM"/>
                                 <include reference="E5C-pk-YLP"/>
@@ -399,6 +398,7 @@
                                 <include reference="SJ5-rU-OjI"/>
                                 <include reference="n1w-P3-Ja3"/>
                                 <include reference="wwv-Vi-sSU"/>
+                                <include reference="t6M-XA-MRR"/>
                             </mask>
                         </variation>
                     </view>
