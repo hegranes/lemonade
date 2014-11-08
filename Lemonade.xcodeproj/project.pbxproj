@@ -36,6 +36,7 @@
 		9CAE129D1A0D5E99005222BA /* LemonadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAE12A21A0D5E99005222BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CAE12A31A0D5E99005222BA /* LemonadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonadeTests.swift; sourceTree = "<group>"; };
+		9CAE12AD1A0D8E81005222BA /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 				9CAE12911A0D5E99005222BA /* Main.storyboard */,
 				9CAE12941A0D5E99005222BA /* Images.xcassets */,
 				9CAE12961A0D5E99005222BA /* LaunchScreen.xib */,
+				9CAE12AD1A0D8E81005222BA /* MyPlayground.playground */,
 				9CAE128B1A0D5E99005222BA /* Supporting Files */,
 			);
 			path = Lemonade;
