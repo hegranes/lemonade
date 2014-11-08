@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     var sugarCubesCost = 1
     var lemonsInTheMix = 0
     var sugarCubesInTheMix = 0
+    var batchRatio:Float = 0.000
+    var dailyRevenue = 0
+    var dailyUnits = 0
     
     
     override func viewDidLoad() {
@@ -43,9 +46,10 @@ class ViewController: UIViewController {
     
     @IBAction func startTheDayButtonPressed(sender: AnyObject) {
         println("start button pressed")
-
+        println("beginning wallet balance is $\(wallet)")
         batchMixing()
-    
+        customerSimulation()
+        startNewDay()
     }
     
     
@@ -171,18 +175,69 @@ class ViewController: UIViewController {
         var lemonRatio:Float = Float(lemonsInTheMix)
         var sugarRatio:Float = Float(sugarCubesInTheMix)
         
-        var batchRatio:Float = lemonRatio / sugarRatio
+        batchRatio = lemonRatio / sugarRatio
         
-        println("\(batchRatio)")
+        if batchRatio > 1 {
+            println("the batch ratio is \(batchRatio) -- sour")
+        } else if batchRatio == 1 {
+            println("the batch radio is \(batchRatio) -- balanced")
+        } else if batchRatio < 1 {
+            println("the batch ratio is \(batchRatio) -- sweet")
+        }
         
+
     }
 
     
-    func customerStuff() {
+    func customerSimulation() {
         
         var randomDailyCustomers = Int(arc4random_uniform(UInt32(10)))
         
+        var dailyCustomers = randomDailyCustomers + 1
+        println("today there were \(dailyCustomers) customers")
         
+        for var index = 0; index < dailyCustomers; ++index {
+            var randomTaste = Int(arc4random_uniform(UInt32(10)))
+            var tasteFloat = (Float(randomTaste) + 1) / 10
+            
+            if tasteFloat <= 0.4 && batchRatio > 1 {
+                dailyRevenue += 1
+                dailyUnits += 1
+                println("customer #\(index): one sour lemonade sold")
+            } else if tasteFloat > 0.4 && tasteFloat <= 0.6 && batchRatio == 1 {
+                dailyRevenue += 1
+                dailyUnits += 1
+                println("customer #\(index): one balanced lemonade sold")
+            } else if tasteFloat > 0.6 && batchRatio < 1 {
+                dailyRevenue += 1
+                dailyUnits += 1
+                println("customer #\(index): one sweet lemonade sold")
+            } else {
+                dailyRevenue += 0
+                println("customer #\(index): no lemonade sold")
+            }
+            
+
+        }
+
+        println("today's revenue was $\(dailyRevenue)")
+        wallet += dailyRevenue
+        
+        showAlertWithText(header: "Today's Recap", message: "Today there were \(dailyCustomers) customers and you sold \(dailyUnits) for $\(dailyRevenue) in revenue.  You now have $\(wallet) to start a new day.")
     }
+    
+    
+    func startNewDay() {
+        lemonsInTheMix = 0
+        lemonsMixLabel.text = "\(lemonsInTheMix)"
+        sugarCubesInTheMix = 0
+        sugarCubesMixLabel.text = "\(sugarCubesInTheMix)"
+        walletLabel.text = "$\(wallet)"
+        println("starting new day with a wallet balance of $\(wallet)")
+        dailyUnits = 0
+        dailyRevenue = 0
+    }
+    
+    
 }
 

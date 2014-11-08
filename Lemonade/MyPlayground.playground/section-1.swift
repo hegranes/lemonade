@@ -32,4 +32,8 @@ var sugarFloat = Float(sugarsMix)
 var batchRatio = lemonFloat / sugarFloat
 
 
+var randomDailyCustomers = Int(arc4random_uniform(UInt32(10)))
+
+var randomFloat = Float(randomDailyCustomers) / 10
+
 
