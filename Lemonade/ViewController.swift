@@ -193,7 +193,7 @@ class ViewController: UIViewController {
     
     func customerSimulation() {
         
-        var randomDailyCustomers = Int(arc4random_uniform(UInt32(10)))
+        var randomDailyCustomers = Int(arc4random_uniform(UInt32(30)))
         
         var dailyCustomers = randomDailyCustomers + 1
         println("today there were \(dailyCustomers) customers")
@@ -230,6 +230,9 @@ class ViewController: UIViewController {
     
     
     func startNewDay() {
+        if wallet == 0 {
+            showAlertWithText(header: "D'oh", message: "You're broke, biatch.")
+        } else {
         lemonsInTheMix = 0
         lemonsMixLabel.text = "\(lemonsInTheMix)"
         sugarCubesInTheMix = 0
@@ -238,6 +241,7 @@ class ViewController: UIViewController {
         println("starting new day with a wallet balance of $\(wallet)")
         dailyUnits = 0
         dailyRevenue = 0
+        }
     }
     
     
